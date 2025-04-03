@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.dpassignments.employeedata.HelloController">
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.dpassignments.employeedata.ViewController">
   <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+  <Label fx:id="welcomeText" text="Employee Job Titles">
+      <font>
+         <Font name="System Bold" size="13.0" />
+      </font></Label>
+   <ComboBox fx:id="languageSelector" prefWidth="150.0" promptText="Language" />
+   <ListView fx:id="languageDisplay" prefHeight="200.0" prefWidth="200.0" />
+   <TextArea fx:id="key" prefHeight="6.0" prefWidth="200.0" promptText="Enter key" />
+   <TextArea fx:id="translation" prefHeight="6.0" prefWidth="200.0" promptText="Enter translation" />
+   <Button fx:id="addButton" mnemonicParsing="false" onAction="#buttonClick" text="Add/Update Translation" />
 </VBox>
